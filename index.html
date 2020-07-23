@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Document</title>
+    <s><link rel="stylesheet" href="style.css"></s>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <!--   <input type="text" id="year"> 
+    <button onclick="isleafyear()">Check</button> -->
+  <!--   <img width="100px" height="100px" onclick="btn ()" src="data:image/jpeg;base64,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" alt="">
+    <img width="100px" height="100px" onclick="btn ()" src="data:image/jpeg;base64,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" alt="">
+    <img width="100px" height="100px" onclick="btn ()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2aFR5U3lDwjBzgs03JHWbOv-8Q5vUeCJjKQ&usqp=CAU" alt="">
+    <img width="100px" height="100px" onclick="btn ()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXL5ibOa--nETmUy62iEf0sGnuXXcxDVqFQg&usqp=CAU" alt=""> -->
+   <!-- <ol>
+        <h3>S NO.  NAME  CLASS</h3>
+         <li  >Vardy 9</li> <button >Delete</button>    
+         <li  >Rashford 7</li> <button >Delete</button>  
+         <li >Pepe 7</li> <button>Delete</button>  
+         <li id="clear6" >Pope 5</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear5" >Mesut 3</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear4" >Leno 6</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear3" >Nuer 4</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear2" >Ramos 9</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear1" >Gueye 10</li> <button  onclick="clearBtn ()">Delete</button>  
+         <li id="clear" >Muller 7</li> <button  onclick="clearBtn ()">Delete</button>  
+    
+    </ol>-->
+  <!--   <img src="images/neymar.jpg" id="neymar" onmouseover="changePicture ()"  onmouseout="changePictureAfter ()">-->
+ 
+ <!--  <div>
+<button onclick="sub ()" id="sub">-</button>
+<input type="number" id="input1"  value="0">
+<button onclick="add()" id="add">+</button>
+  </div>  -->
+
+  <!-- <div id="form" >
+Full Name : <input type="text" id="fullname" placeholder="Enter Full Name" value="" > <br>
+Email Address : <input type="email" name="email" id="email"   placeholder="Enter Email Address" value="" ><br>
+Phone Number : <input type="number"  id="number" placeholder="Enter Phone Number" value=""> <br>
+<button onclick="login ()">Submit</button>
+</div> -->
+
+
+ <!--  <div>
+  <h1> DOM </h1>
+  <div id=”form-content” class=”content”>
+  <label for=”first-name”>First Name</label>
+  <input type=”text” id=”first-name” />
+  <label for=”last-name”>Last Name</label>
+  <input type=”text” id=”last-name” />
+  <label for=”email”>Email</label>
+  <input type=”text” id=”email” />
+  </div>
+  <div id=”main-content” class=”content”>
+  <p class=”render”> First Name : Alex</p>
+  <p class=”render” id=”lastName”>Last Name: Bank</p>
+  <p class=”render”> Email : alexbank@example.com</p>
+  <p class=”render”> Country : Pakistan </p>
+  <p class=”render”> contact : +92 300 1234567</p>
+  </div>
+  </div>  -->
+  
+
+  <!--MODAL -->
+ <!-- <div>
+  <img onclick="modal(this)" class="img" data-toggle="modal" data-target="#exampleModal" src="images/1.jpg" alt="">
+  <img onclick="modal(this)" class="img" data-toggle="modal" data-target="#exampleModal" src="images/5.jpg" alt="">
+  <img onclick="modal(this)"  class="img" data-toggle="modal" data-target="#exampleModal"  src="images/7.png" alt="">
+  <img onclick="modal(this)" class="img" data-toggle="modal" data-target="#exampleModal" src="images/9.jpg" alt="">
+</div> -->
+
+  <!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal ( Not to uncomment this)
+</button>--> 
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<img src="" alt="" id="modalimage" class="bigimage" >
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+
+ <!-- <div>
+  <h1>PS 5</h1>
+  <p id="pera1">
+    The original console in the series was the first console of any type to ship over 100 million units, doing so in under a decade.[2] Its successor, the PlayStation 2, was released in 2000. The PlayStation 2 is the best-selling home console to date, having reached over 155 million units sold by the end of 2012.[3] Sony's next console, the PlayStation 3, was released in 2006, selling over 87.4 million units by March 2017.[4] Sony's latest console, the PlayStation 4, was released in 2013, selling a million units within a day, becoming the fastest selling console in history.[5] The next console in the series, the PlayStation 5, is expected to be released by the end of 2020
+    <a href="javascript:void(0)" onclick="readMore()">see more</a>
+ 
+  </p>
+</div>
+<div>
+  <h1>PS 4</h1>
+  <p id="pera2"> 
+    The original console in the series was the first console of any type to ship over 100 million units, doing so in under a decade.[2] Its successor, the PlayStation 2, was released in 2000. The PlayStation 2 is the best-selling home console to date, having reached over 155 million units sold by the end of 2012.[3] Sony's next console, the PlayStation 3, was released in 2006, selling over 87.4 million units by March 2017.[4] Sony's latest console, the PlayStation 4, was released in 2013, selling a million units within a day, becoming the fastest selling console in history.[5] The next console in the series, the PlayStation 5, is expected to be released by the end of 2020
+    <a href="javascript:void(0)" onclick="readMore1()">see more</a>
+
+  </p>
+</div>
+<div>
+  <h1>PS 3</h1>
+  <p id="pera3" >
+    The original console in the series was the first console of any type to ship over 100 million units, doing so in under a decade.[2] Its successor, the PlayStation 2, was released in 2000. The PlayStation 2 is the best-selling home console to date, having reached over 155 million units sold by the end of 2012.[3] Sony's next console, the PlayStation 3, was released in 2006, selling over 87.4 million units by March 2017.[4] Sony's latest console, the PlayStation 4, was released in 2013, selling a million units within a day, becoming the fastest selling console in history.[5] The next console in the series, the PlayStation 5, is expected to be released by the end of 2020
+ <a href="javascript:void(0)" onclick="readMore2()">see more</a>
+  </p>
+</div> -->
+
+<input type="text" id="inputvowel" value="">
+<button onclick="vowels()">Check</button>
+
+
+
+
+  
+  
+  
+  
+
+
+    <script src="app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
